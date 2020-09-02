@@ -1,0 +1,79 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-bg {
+    min-height: 50px;
+    width: 100%;
+    background-color: rgb(57, 67, 71);
+
+    & .nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & h1 {
+            display: block;
+            color: rgb(255, 255, 255);
+        }
+
+        & .gamburger {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            right: 0;
+            height: 40px;
+            width: 50px;
+            padding-top: 11px;
+            z-index: 1000;
+        
+            & span {
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color: rgb(255, 255, 255);
+                transition-duration: 0.1s;
+
+                &:before{
+                    content: '';
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    background-color: rgb(255, 255, 255);
+                    margin-top: 7px;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    background-color: rgb(255, 255, 255);
+                    margin-top: 6px;
+                }
+            }
+        }
+        & .active {
+            & span {
+                transform: rotate(45deg);
+                margin-top: 10px;
+                &:before{
+                    display: none;
+                }
+                &:after {
+                    transform: rotate(-90deg);
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+
