@@ -7,6 +7,7 @@ import {
 import { connect } from 'react-redux';
 
 import Nav from '../Nav';
+import MainPage from '../MainPage'
 
 
 const App = (props) => {
@@ -14,10 +15,16 @@ const App = (props) => {
             <div className='wrapper'>
                 <div>
                     <Nav/>
-                        
+                    
                     <Switch>
+                        <Route exaxt path='/'>
+                            <MainPage/>
+                        </Route>
+                        <Route path="*">
+                            <MainPage/>
+                        </Route>
 
-                        {/* <Redirect to="/"/> */}
+                        <Redirect to="/"/>
                     </Switch>
                 </div>
             </div>

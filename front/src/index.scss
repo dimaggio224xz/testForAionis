@@ -1,3 +1,7 @@
+$black-bg: rgb(66, 80, 85);
+$gamburger-strip-color: rgb(255, 255, 255);
+
+
 *, *:before, *:after{
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +15,7 @@ body {
 .nav-bg {
     min-height: 50px;
     width: 100%;
-    background-color: rgb(57, 67, 71);
+    background-color: $black-bg;
 
     & .nav {
         position: relative;
@@ -29,25 +33,26 @@ body {
             display: flex;
             justify-content: center;
             cursor: pointer;
-            right: 0;
+            left: 16px;
             height: 40px;
             width: 50px;
             padding-top: 11px;
             z-index: 1000;
+            transition-duration: 0.3s;
         
             & span {
                 display: block;
                 width: 30px;
                 height: 2px;
-                background-color: rgb(255, 255, 255);
-                transition-duration: 0.1s;
+                background-color: $gamburger-strip-color;
+                transition-duration: 0.2s;
 
                 &:before{
                     content: '';
                     display: block;
                     width: 30px;
                     height: 2px;
-                    background-color: rgb(255, 255, 255);
+                    background-color: $gamburger-strip-color;
                     margin-top: 7px;
                 }
                 &:after {
@@ -55,23 +60,67 @@ body {
                     display: block;
                     width: 30px;
                     height: 2px;
-                    background-color: rgb(255, 255, 255);
+                    background-color: $gamburger-strip-color;
                     margin-top: 6px;
                 }
             }
         }
         & .active {
+            left: 258px;
+
             & span {
                 transform: rotate(45deg);
                 margin-top: 10px;
+                background-color: $black-bg;
+                
                 &:before{
                     display: none;
                 }
                 &:after {
                     transform: rotate(-90deg);
                     margin: 0;
+                    background-color: $black-bg;
                 }
             }
+        }
+
+        &-menu{
+            position: absolute;
+            top: 0;
+            left: -100%;
+            z-index: 900;
+            transition-duration: 0.2s;
+            width: 320px;
+            min-height: 100vh;
+            background-color: rgb(222, 222, 222);
+            border-right: 3px solid $black-bg;
+            padding: 10px 0 0;
+
+            &-info {
+                font-weight: 700;
+                color: $black-bg;
+                font-size: 30px;
+                margin: 0 0 15px 26px;
+            }
+
+            &-text {
+                color: #516f7c;
+                font-size: 22px;
+                padding: 3px 0 3px 26px;
+                transition-duration: 0.22s;
+
+                &:hover {
+                    background-color: $black-bg;
+                    color: rgb(255, 255, 255);
+                }
+            }
+            & a:hover{
+                text-decoration: none;
+            }
+        }
+
+        & .active-menu {
+            left: 0;
         }
     }
 }
