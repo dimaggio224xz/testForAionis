@@ -28,6 +28,18 @@ body {
             color: rgb(255, 255, 255);
         }
 
+        &-leng {
+            position: absolute;
+            right: 20px;
+
+            & button {
+                margin: 2px;
+                padding: 0;
+                height: 30px;
+                width: 40px;
+            }
+        }
+
         & .gamburger {
             position: absolute;
             display: flex;

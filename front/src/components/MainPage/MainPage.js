@@ -4,7 +4,7 @@ const MainPage = (props) => {
     return (
         <>
         <div className='container'>
-            kjn
+            
         </div>
         </>
     )

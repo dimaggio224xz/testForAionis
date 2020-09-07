@@ -11,6 +11,8 @@ import MainPage from '../MainPage'
 
 
 const App = (props) => {
+
+
     return (<>
             <div className='wrapper'>
                 <div>
