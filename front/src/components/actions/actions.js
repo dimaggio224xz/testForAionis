@@ -53,10 +53,10 @@ const completeThunk = (_id) => dispatch => {
                     .catch(err => dispatch(returnState()))
             }
             else {
-                return dispatch(returnState())
+                return dispatch(returnState());
             }
         })
-        .catch(err => dispatch(returnState()))
+        .catch(err => dispatch(returnState()));
 }
 
 const unCompleteThunk = (_id) => dispatch => {
@@ -68,10 +68,10 @@ const unCompleteThunk = (_id) => dispatch => {
                     .catch(err => dispatch(returnState()))
             }
             else {
-                return dispatch(returnState())
+                return dispatch(returnState());
             }
         })
-        .catch(err => dispatch(returnState()))
+        .catch(err => dispatch(returnState()));
 }
 
 const deleteNoteThunk = (_id) => dispatch => {
@@ -83,10 +83,10 @@ const deleteNoteThunk = (_id) => dispatch => {
                     .catch(err => dispatch(returnState()))
             }
             else {
-                return dispatch(returnState())
+                return dispatch(returnState());
             }
         })
-        .catch(err => dispatch(returnState()))
+        .catch(err => dispatch(returnState()));
 }
 
 const createNoteThunk = (title, text, date) => dispatch => {
@@ -94,13 +94,13 @@ const createNoteThunk = (title, text, date) => dispatch => {
     .then(res=>{
         if (res.msg && res.msg === 'SAVE') {
             window.location = '/';
-            return dispatch(returnState())
+            return dispatch(returnState());
         }
         else {
-            return dispatch(returnState())
+            return dispatch(returnState());
         }
     })
-    .catch(err => dispatch(returnState()))
+    .catch(err => dispatch(returnState()));
 }
 
 
@@ -108,14 +108,29 @@ const getEditInfoThunk = (_id) => dispatch => {
     return getServerDatas.getNoteById(_id)
     .then(res=>{
         if (res.msg) {
-            return dispatch(returnState())
+            return dispatch(returnState());
         }
         else {
             return dispatch(getEditInfo(res));
         }
     })
-    .catch(err => dispatch(returnState()))
+    .catch(err => dispatch(returnState()));
 }
+
+const updateNoteThunk = (_id, title, text) => dispatch => {
+    return getServerDatas.updateNote(_id, title, text)
+    .then(res=>{
+        if (res.msg && res.msg === 'SAVE') {
+            window.location = '/';
+            return dispatch(returnState());
+        }
+        else {
+            return dispatch(returnState());
+        }
+    })
+    .catch(err => dispatch(returnState()));
+}
+
 
 
 
@@ -138,6 +153,8 @@ const mapDispatchToProps = (dispatch) => {
         unComplete: (_id) => dispatch(unCompleteThunk(_id)),
 
         createNote: (title, text, date) => dispatch(createNoteThunk(title, text, date)),
+
+        updateNote: (_id, title, text) => dispatch(updateNoteThunk(_id, title, text)),
 
         getEditInfo: (_id) => dispatch(getEditInfoThunk(_id)),
 

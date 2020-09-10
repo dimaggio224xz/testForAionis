@@ -27,11 +27,11 @@ const UpdateNote = (props) => {
 
 
     const updateNote = () => {
-        
+        props.updateNote(props.edit._id, title, text)
     }
 
 
-    let btnDisabled = !title || !text ? true : false;
+    let btnDisabled = !title || !text || !props.edit ? true : false;
 
     return (
         <>
@@ -55,5 +55,5 @@ const UpdateNote = (props) => {
 }
 
 
-const mapStateToProps = (store) => ({...store});
+const mapStateToProps = (store) => ({edit: store.edit});
 export default connect( mapStateToProps, mapDispatchToProps )(UpdateNote);
