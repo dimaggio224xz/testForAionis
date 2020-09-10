@@ -72,7 +72,7 @@ const Nav = () => {
                         </div>
                     </Link>
 
-                    <Link to='executed'>
+                    <Link to='/completed'>
                         <div onClick={()=> setActive(false)} className='nav-menu-text'>
                             {t('menu.completed')}
                         </div>

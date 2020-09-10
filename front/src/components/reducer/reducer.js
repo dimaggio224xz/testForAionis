@@ -1,11 +1,15 @@
 const initialState = {
-    notes: null
+    notes: null,
+    completedNotes: null
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case 'GET_ALL_NOTES':
-            return {notes: action.data};
+            return {...state, ...{notes: action.data}};
+
+        case 'GET_ALL_COMPLETED_NOTES':
+            return {...state, ...{completedNotes: action.data}};
 
         default:
             return state;

@@ -8,7 +8,7 @@ import {
 
 import Nav from '../Nav';
 import MainPage from '../MainPage'
-
+import CompletedNotes from '../CompletedNotes';
 
 
 const App = (props) => {
@@ -21,13 +21,18 @@ const App = (props) => {
                     <Nav/>
                     
                     <Switch>
-                        <Route exaxt path='/'>
-                            <MainPage/>
-                        </Route>
-                        <Route path="*">
+                        <Route exact path='/'>
                             <MainPage/>
                         </Route>
 
+                        <Route path='/completed'>
+                            <CompletedNotes/>
+                        </Route>
+
+
+                        <Route path="*">
+                            <MainPage/>
+                        </Route>
                         <Redirect to="/"/>
                     </Switch>
                 </div>

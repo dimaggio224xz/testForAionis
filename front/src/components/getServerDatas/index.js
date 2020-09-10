@@ -6,6 +6,12 @@ export default
         else return await res.json();
     },
 
+    getAllCompletedNotes: async () =>{
+        const res = await fetch("/get-all-completed");
+        if (!res.ok) throw new Error(`COULD_NOT_GET_DATA`);
+        else return await res.json();
+    },
+
     getNoteById: async (_id) =>{
         const res = await fetch("/get/" + _id);
         if (!res.ok) throw new Error(`COULD_NOT_GET_DATA`);

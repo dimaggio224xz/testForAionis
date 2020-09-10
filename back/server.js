@@ -12,13 +12,23 @@ function createId() {
     return '' +  Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
 }
 
-function getAllNotes() {
+function getAll() {
     return ( JSON.parse(fs.readFileSync('./database.json', 'utf-8')) ).notes;
+}
+
+function getAllNotes() {
+    const notes = getAll().filter(i=> i.completed === false);
+    return notes.length === 0 ? 'EMPTY' : notes;
+}
+
+function getAllCompletedNotes() {
+    const notes = getAll().filter(i=> i.completed === true)
+    return notes.length === 0 ? 'EMPTY' : notes;
 }
 
 function getNoteById(_id) {
     _id = ''+_id;
-    const arr = getAllNotes()
+    const arr = getAll()
     if (arr.length === 0) {
         return null;
     }
@@ -28,7 +38,7 @@ function getNoteById(_id) {
 
 function deleteNote(_id) {
     _id = ''+_id;
-    const arr = getAllNotes();
+    const arr = getAll();
 
     if (arr.length === 0) {
         return null;
@@ -55,7 +65,7 @@ function createNote(title, text, date) {
         _id: createId(),
         completed: false
     }
-    const arr = getAllNotes()
+    const arr = getAll()
     arr.unshift(obj);
     
     fs.writeFileSync('./database.json', JSON.stringify({notes: arr}, null, 4));
@@ -64,7 +74,7 @@ function createNote(title, text, date) {
 
 function updateNote(_id, title, text){
     _id = ''+_id;
-    const arr = getAllNotes()
+    const arr = getAll()
     let resultArr = [];
 
     for(let item of arr) {
@@ -88,7 +98,7 @@ function updateNote(_id, title, text){
 
 function completedOrNot(_id, status) {
     _id = ''+_id;
-    const arr = getAllNotes();
+    const arr = getAll();
     let resultArr = [];
 
     for(let item of arr) {
@@ -123,6 +133,11 @@ function completedOrNot(_id, status) {
 
 app.get('/get-all', function (req, res) {
     res.end(JSON.stringify(getAllNotes()))
+});
+
+
+app.get('/get-all-completed', function (req, res) {
+    res.end(JSON.stringify(getAllCompletedNotes()))
 });
 
 
