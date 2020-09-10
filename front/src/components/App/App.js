@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
     Switch,
     Route,
@@ -9,12 +9,10 @@ import {
 import Nav from '../Nav';
 import MainPage from '../MainPage'
 import CompletedNotes from '../CompletedNotes';
+import CreateNote from '../CreateNote';
+import UpdateNote from '../UpdateNote';
 
-
-const App = (props) => {
-
-
-
+const App = () => {
     return (<>
             <div className='wrapper'>
                 <div>
@@ -25,10 +23,17 @@ const App = (props) => {
                             <MainPage/>
                         </Route>
 
-                        <Route path='/completed'>
+                        <Route exact path='/completed'>
                             <CompletedNotes/>
                         </Route>
 
+                        <Route exact path='/create'>
+                            <CreateNote/>
+                        </Route>
+
+                        <Route exact path='/update/:id'>
+                            <UpdateNote/>
+                        </Route>
 
                         <Route path="*">
                             <MainPage/>

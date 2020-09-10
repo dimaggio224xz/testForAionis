@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 
 import date from '../date';
 import mapDispatchToProps from '../actions';
@@ -21,9 +22,8 @@ const MainPageItem = (props) => {
         if (props.obj && props.obj._id)
             props.complete(props.obj._id)
     }
-    const makeEdit = () => {
-        
-    }
+
+
 
     return (
         <>
@@ -35,7 +35,10 @@ const MainPageItem = (props) => {
 
             <div className='mt-3'>
                 <button onClick={()=> makeComplete()} className="btn btn-success">{t('buttons.complete')}</button>
-                <button onClick={()=> makeEdit()} className="btn btn-primary ml-4">{t('buttons.edit')}</button>
+
+                <Link to={'/update/' + props.obj._id}>
+                    <button className="btn btn-primary ml-4">{t('buttons.edit')}</button>
+                </Link>
             </div>
 
             <hr/>

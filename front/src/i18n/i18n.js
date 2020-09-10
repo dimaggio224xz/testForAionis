@@ -18,6 +18,11 @@ i18n.use(LanguageDetector).init({
                     edit: 'Edit',
                     unComplete: 'Un complete',
                     delete: 'Delete'
+                },
+                createEdit: {
+                    save: 'Save',
+                    title: 'Title:',
+                    text: 'Text:'
                 }
             }
         },
@@ -37,6 +42,11 @@ i18n.use(LanguageDetector).init({
                     edit: 'Изменить',
                     unComplete: 'Возобновить',
                     delete: 'Удалить'
+                },
+                createEdit: {
+                    save: 'Сохранить',
+                    title: 'Заголовок:',
+                    text: 'Текст:'
                 }
             }
         },

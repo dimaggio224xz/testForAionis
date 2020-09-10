@@ -163,6 +163,50 @@ body {
     font-weight: bold;
 }
 
+.create-note {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: calc(100vh - 55px);
+    padding-top: 30px;
+
+    & label {
+        width: 100%;
+
+        & div {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        & input {
+            border-radius: 8px;
+            border: 2px solid rgb(136, 136, 136);
+            padding: 6px 12px;
+            height: 42px;
+            width: 400px;
+            font-size: 25px;
+            margin-top: 8px;
+        }
+        & textarea {
+            border-radius: 8px;
+            border: 2px solid rgb(136, 136, 136);
+            width: 100%;
+            min-height: 250px;
+            padding: 10px 40px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @keyframes ldio-d9d37xngcou {

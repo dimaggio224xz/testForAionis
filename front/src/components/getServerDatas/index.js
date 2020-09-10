@@ -19,7 +19,7 @@ export default
     },
 
     createNote: async (title, text, date) => {
-        const res = await fetch("/users/new", {
+        const res = await fetch("/create-note", {
             headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export default
     },
 
     updateNote: async (_id, title, text) => {
-        const res = await fetch("/users/new", {
+        const res = await fetch("/update-note", {
             headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'

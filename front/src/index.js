@@ -8,8 +8,10 @@ import { Provider } from 'react-redux';
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import thunk from 'redux-thunk';
-import App from './components/App'
-import reducer from './components/reducer'
+
+
+import App from './components/App';
+import reducer from './components/reducer';
 
 
 
@@ -22,5 +24,6 @@ ReactDOM.render(
 				<App/>
 			</I18nextProvider>
 		</Router>
+		
 	</Provider>,
 		document.getElementById('root'));

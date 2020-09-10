@@ -33,5 +33,6 @@ const MainPage = (props) => {
     )
 }
 
-const mapStateToProps = (store) => ({notes: store.notes});
+// const mapStateToProps = (store) => ({notes: store.notes});
+const mapStateToProps = (store) => ({...store});
 export default connect( mapStateToProps, mapDispatchToProps )(MainPage);

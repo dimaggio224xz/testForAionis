@@ -144,7 +144,6 @@ app.get('/get-all-completed', function (req, res) {
 app.get('/get/:id', function (req, res) {
     if(req.params.id) {
         const note = getNoteById(req.params.id);
-        console.log(note)
         if(note) {
             res.end(JSON.stringify({...note}))
         } else {
@@ -159,6 +158,8 @@ app.get('/get/:id', function (req, res) {
 
 app.post('/create-note', function (req, res) {
     const {title, text, date} = req.body;
+
+    console.log(title, text, date)
 
     if (!title || !text || !date) {
         res.end(JSON.stringify({msg: 'ERROR'}))
