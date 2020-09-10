@@ -64,6 +64,33 @@ const unCompleteThunk = (_id) => dispath => {
         .catch(err => dispath(returnState()))
 }
 
+const deleteNoteThunk = (_id) => dispath => {
+    return getServerDatas.deleteNote(_id)
+        .then(res => {
+            if(res.msg === 'DELETED'){
+                return getServerDatas.getAllCompletedNotes()
+                    .then(res=> dispath(getAllCompletedNotes(res)))
+                    .catch(err => dispath(returnState()))
+            }
+            else {
+                return dispath(returnState())
+            }
+        })
+        .catch(err => dispath(returnState()))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 const mapDispatchToProps = (dispatch) => {
     return {
         getAllNotes: () => dispatch(getAllNotesThunk()),
@@ -71,6 +98,8 @@ const mapDispatchToProps = (dispatch) => {
 
         getAllCompletedNotes: () => dispatch(getAllCompletedNotesThunk()),
         unComplete: (_id) => dispatch(unCompleteThunk(_id)),
+
+        deleteNote: (_id) => dispatch(deleteNoteThunk(_id)),
     }
 }
 

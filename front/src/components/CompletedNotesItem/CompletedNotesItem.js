@@ -18,6 +18,8 @@ const CompletedNotesItem = (props) => {
             props.unComplete(props.obj._id)
     }
     const makeDelete = () => {
+        if (props.obj && props.obj._id)
+        props.deleteNote(props.obj._id)
         
     }
 
