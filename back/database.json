@@ -1,5 +1,25 @@
 {
     "notes": [
-        
+        {
+            "_id": "7ikbuyqkdkxwctf86g94vg",
+            "title": "Note 3",
+            "text": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.",
+            "date": 1599580977908,
+            "completed": false
+        },
+        {
+            "_id": "uk2spa1i3dbwkv4l42ndzr",
+            "title": "Note 2",
+            "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+            "completed": false,
+            "date": 1599580898310
+        },
+        {
+            "_id": "tvug6kh62osl240j1mzb",
+            "title": "Note 1",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Egestas diam in arcu cursus euismod. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Ipsum faucibus vitae aliquet nec ullamcorper. Duis ut diam quam nulla porttitor massa id neque. Eget egestas purus viverra accumsan in. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Nulla malesuada pellentesque elit eget.",
+            "completed": false,
+            "date": 1599580858942
+        }
     ]
 }

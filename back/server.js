@@ -8,10 +8,6 @@ app.use(bodyParser.json());
 
 
 
-
-
-
-
 function createId() {
     return '' +  Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
 }
@@ -123,6 +119,8 @@ function completedOrNot(_id, status) {
 
 
 
+
+
 app.get('/get-all', function (req, res) {
     res.end(JSON.stringify(getAllNotes()))
 });
@@ -131,8 +129,9 @@ app.get('/get-all', function (req, res) {
 app.get('/get/:id', function (req, res) {
     if(req.params.id) {
         const note = getNoteById(req.params.id);
+        console.log(note)
         if(note) {
-            res.end(JSON.stringify({note}))
+            res.end(JSON.stringify({...note}))
         } else {
             res.end(JSON.stringify({msg: 'ERROR'}))
         }

@@ -4,13 +4,15 @@ import {
     Route,
     Redirect
 } from "react-router-dom";
-import { connect } from 'react-redux';
+
 
 import Nav from '../Nav';
 import MainPage from '../MainPage'
 
 
+
 const App = (props) => {
+
 
 
     return (<>

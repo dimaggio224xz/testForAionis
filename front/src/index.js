@@ -2,21 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import 'bootstrap/bootstrap.min.css';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter as Router} from "react-router-dom";
 import { Provider } from 'react-redux';
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
+import thunk from 'redux-thunk';
 import App from './components/App'
+import reducer from './components/reducer'
 
-const reducer = (state, action) => {
-	switch(action.type) {
-		default:
-			return state;
-	}
-}
 
-const store = createStore(reducer);
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
 	<Provider store={store}>
