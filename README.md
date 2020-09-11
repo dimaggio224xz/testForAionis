@@ -11,6 +11,7 @@ and  unzip it.
 
 If you use Clone with SSH - you will open CMD(command line interpreter) on your
 computer in this folder and write comand
+
 #### `git clone (string, which you copy from github)`
 
 
