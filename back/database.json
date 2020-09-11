@@ -1,6 +1,20 @@
 {
     "notes": [
         {
+            "title": "Рамка",
+            "text": "У элемента есть рамка (border), внутренний отступ (padding) и прокрутка. Полный набор характеристик. Обратите внимание, тут нет внешних отступов (margin), потому что они не являются частью элемента, для них нет особых JavaScript-свойств.",
+            "date": 1599812637346,
+            "_id": "l4icr5sewbnhza3a4s7kxq",
+            "completed": false
+        },
+        {
+            "_id": "a2lc2due3fao3obdrd95k9",
+            "title": "Bootstrap",
+            "text": "Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the .sr-only class.\n:)\n:)\n:)",
+            "date": 1599771051160,
+            "completed": false
+        },
+        {
             "_id": "7ikbuyqkdkxwctf86g94vg",
             "title": "Note my",
             "text": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. ",
@@ -12,14 +26,7 @@
             "title": "Note 45",
             "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
             "date": 1599580898310,
-            "completed": false
-        },
-        {
-            "_id": "tvug6kh62osl240j1mzb",
-            "title": "Note 1",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Egestas diam in arcu cursus euismod. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Ipsum faucibus vitae aliquet nec ullamcorper. Duis ut diam quam nulla porttitor massa id neque. Eget egestas purus viverra accumsan in. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Nulla malesuada pellentesque elit eget.",
-            "date": 1599580858942,
-            "completed": false
+            "completed": true
         }
     ]
 }

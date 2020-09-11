@@ -5,12 +5,14 @@ import {
     Redirect
 } from "react-router-dom";
 
-
 import Nav from '../Nav';
 import MainPage from '../MainPage'
 import CompletedNotes from '../CompletedNotes';
 import CreateNote from '../CreateNote';
 import UpdateNote from '../UpdateNote';
+
+
+
 
 const App = () => {
     return (<>
