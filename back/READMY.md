@@ -1,6 +1,6 @@
 ## Instruction to start back
 
-Open CMD(command line interpreter) in this folder, and write some comands:
+Open CMD(command line interpreter) in this folder (`back`), and write some comands:
 
 #### `npm install`
 
