@@ -1,6 +1,8 @@
 
 ## Instruction to start
 
+That ran this app, your computer must have downloaded `Git` and `Node js` 
+
 At start, you must click on this page on green button `Code` and
 Downlod ZIP or Clone with SSH
 
@@ -12,6 +14,8 @@ computer in this folder and write comand
 #### `git clone (string, which you copy from github)`
 
 
+So in both cases you get folder with name - testForAionis.
+And 
 
 
 Runs the app in the development mode.<br />
