@@ -159,7 +159,6 @@ app.get('/get/:id', function (req, res) {
 app.post('/create-note', function (req, res) {
     const {title, text, date} = req.body;
 
-    console.log(title, text, date)
 
     if (!title || !text || !date) {
         res.end(JSON.stringify({msg: 'ERROR'}))
