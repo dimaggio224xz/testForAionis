@@ -1,7 +1,7 @@
 
 ## Instruction to start
 
-**That ran this app, your computer must have downloaded `Git` and `Node js`
+###### That ran this app, your computer must have downloaded `Git` and `Node js`
 
 At start, you must click on this page on green button `Code` and
 Downlod ZIP or Clone with SSH
