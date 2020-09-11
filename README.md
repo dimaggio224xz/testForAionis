@@ -1,7 +1,12 @@
 
-## Available Scripts
+## Instruction to start
 
-In the project directory, you can run:
+At start, you must click on this page on green button `Code` and
+Downlod ZIP or Clone with SSH
+
+if you use Download ZIP - you will download folder on you computer
+and  unzip it.
+
 
 ### `npm start`
 
