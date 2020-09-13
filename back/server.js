@@ -161,7 +161,8 @@ app.post('/create-note', function (req, res) {
 
 
     if (!title || !text || !date) {
-        res.end(JSON.stringify({msg: 'ERROR'}))
+        res.end(JSON.stringify({msg: 'ERROR'}));
+        return;
     }
 
     const answer = createNote(title, text, date);
@@ -177,7 +178,8 @@ app.post('/update-note', function (req, res) {
     const {_id, title, text} = req.body;
 
     if (!_id || !title || !text) {
-        res.end(JSON.stringify({msg: 'ERROR'}))
+        res.end(JSON.stringify({msg: 'ERROR'}));
+        return;
     }
 
     const answer = updateNote(_id, title, text);
