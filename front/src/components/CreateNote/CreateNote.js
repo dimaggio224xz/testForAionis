@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import mapDispatchToProps from '../actions';
+import mapDispatchToProps from '../../redux/actions';
 
 
 const CreateNote = (props) => {

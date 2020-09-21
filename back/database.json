@@ -1,11 +1,11 @@
 {
     "notes": [
         {
+            "_id": "l4icr5sewbnhza3a4s7kxq",
             "title": "Рамка",
             "text": "У элемента есть рамка (border), внутренний отступ (padding) и прокрутка. Полный набор характеристик. Обратите внимание, тут нет внешних отступов (margin), потому что они не являются частью элемента, для них нет особых JavaScript-свойств.",
             "date": 1599812637346,
-            "_id": "l4icr5sewbnhza3a4s7kxq",
-            "completed": false
+            "completed": true
         },
         {
             "_id": "a2lc2due3fao3obdrd95k9",

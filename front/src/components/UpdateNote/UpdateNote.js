@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useParams } from "react-router-dom";
 
-import mapDispatchToProps from '../actions';
+import mapDispatchToProps from '../../redux/actions';
 
 
 const UpdateNote = (props) => {

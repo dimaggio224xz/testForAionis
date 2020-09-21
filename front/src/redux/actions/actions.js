@@ -1,30 +1,36 @@
-import getServerDatas from '../getServerDatas';
+import getServerDatas from '../../tools/getServerDatas';
+import {
+    RETURN_STATE,
+    GET_ALL_NOTES,
+    GET_ALL_COMPLETED_NOTES,
+    GET_EDIT_INFO
+} from '../actionTypes'
 
 
 
 const returnState = () => {
     return {
-        type: 'RETURN_STATE'
+        type: RETURN_STATE
     }
 }
 
 const getAllNotes = (data) => {
     return {
-        type: 'GET_ALL_NOTES',
+        type: GET_ALL_NOTES,
         data
     };
 }
 
 const getAllCompletedNotes = (data) => {
     return {
-        type: 'GET_ALL_COMPLETED_NOTES',
+        type: GET_ALL_COMPLETED_NOTES,
         data
     };
 }
 
 const getEditInfo = (data) => {
     return {
-        type: 'GET_EDIT_INFO',
+        type: GET_EDIT_INFO,
         data
     };
 }

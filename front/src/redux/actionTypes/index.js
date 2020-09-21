@@ -1,0 +1,4 @@
+export const RETURN_STATE = 'RETURN_STATE';
+export const GET_ALL_NOTES = 'GET_ALL_NOTES';
+export const GET_ALL_COMPLETED_NOTES = 'GET_ALL_COMPLETED_NOTES';
+export const GET_EDIT_INFO = 'GET_EDIT_INFO';

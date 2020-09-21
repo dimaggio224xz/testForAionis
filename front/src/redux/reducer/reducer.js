@@ -1,3 +1,9 @@
+import {
+    GET_ALL_NOTES,
+    GET_ALL_COMPLETED_NOTES,
+    GET_EDIT_INFO
+} from '../actionTypes'
+
 const initialState = {
     notes: null,
     completedNotes: null,
@@ -6,15 +12,15 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'GET_ALL_NOTES':
+        case GET_ALL_NOTES:
             return {...state, ...{notes: action.data}};
-            break;
-        case 'GET_ALL_COMPLETED_NOTES':
+
+        case GET_ALL_COMPLETED_NOTES:
             return {...state, ...{completedNotes: action.data}};
-            break;
-        case 'GET_EDIT_INFO':
+
+        case GET_EDIT_INFO:
             return {...state, ...{edit: action.data}};
-            break;
+
         default:
             return state;
     }

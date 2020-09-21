@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import EmptyMSG from '../EmptyMSG';
-import mapDispatchToProps from '../actions';
+import mapDispatchToProps from '../../redux/actions';
 import Spinner from '../Spinner';
 import CompletedNotesItem from '../CompletedNotesItem';
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import date from '../date';
-import mapDispatchToProps from '../actions';
+import date from '../../tools/date';
+import mapDispatchToProps from '../../redux/actions';
 
 
 const CompletedNotesItem = (props) => {
